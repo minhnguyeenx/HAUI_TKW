@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            padding: 5px;
+            border: 1px solid #333;
+            margin: auto;
+        }
+        input{
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th align="left">Nhập số thứ nhất:</th>
+                <th><input type="text" id="ip1"></th>
+            </tr>
+            <tr>
+                <th align="left">Nhập số thứ hai:</th>
+                <th><input type="text" id="ip2"></th>
+            </tr>
+            <tr>
+                <th align="left">ƯCLN của hai số trên là:</th>
+                <th><input type="text" id="out"></th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="button" onclick="fun1()">Tìm</button>
+                    <button type="button" onclick="fun2()">Huỷ bỏ</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function fun1(){
+            let a = document.getElementById("ip1").value;
+            let b = document.getElementById("ip2").value;
+
+            document.getElementById("out").value = ucln(a, b);
+        }
+        function ucln(a, b){
+            if(!b){
+                return a;
+            }
+            return ucln(b, a%b);
+        }
+        function fun2(){
+            document.getElementById("ip1").value = "";
+            document.getElementById("ip2").value = "";
+            document.getElementById("out").value = "";
+        }
+    </script>
+</body>
+</html>

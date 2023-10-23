@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        th{
+            border: 1px solid #333;
+        }
+        input{
+            width: 300px;
+        }
+        table{
+            padding: 5px;
+            margin: auto;
+        }
+        /* .huy{ */
+            /* width: 50%; */
+        /* } */
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th colspan="2">Sắp xếp mảng</th>
+            </tr>
+            <tr>
+                <th>Nhập mảng:</th>
+                <th><input type="text" id="mang"></th>
+            </tr>
+            <tr>
+                <th>Mảng sau khi sắp xếp:</th>
+                <th><input type="text" id="mang2"></th>
+            </tr>
+            <tr>
+                <th align="right" class="huy"><button type="button" onclick="myfun1()">Huỷ</button></th>
+                <th align="left"><button type="button" onclick="myfun2()">Sắp xếp</button></th>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function myfun1(){
+            document.getElementById("mang").value = "";
+            document.getElementById("mang2").value = "";
+        }
+        function myfun2(){
+           document.getElementById("mang2").value = (document.getElementById("mang").value.split(",")).sort().reverse();
+        }
+    </script>
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #336699;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+header img{
+    height: 80px;
+    width: 80px;
+}
+.h2 select{
+    height: 40px;
+    width: 120px;
+    border: none;
+}
+.h2{
+    display: flex;
+    height: 50px;
+}
+.h2 input {
+    height: 40px;
+    width: 300px;
+    border: none;
+}
+.h2 button {
+    height: 40px;
+    width: 120px;
+    border: none;
+    background-color: black;
+    color: #fff;
+}
+.h3 p{
+    color: #fff;
+    width: 50px;
+}
+.h3:hover p{
+    color: red;
+}
+section{
+    margin-top: 30px;
+    display: flex;
+}
+nav h1{
+    background-color: #336699;
+    color: #fff;
+    width: 200px;
+    padding: 0 10px;
+}
+nav ul{
+    list-style-type: none;
+    width: 200px;
+}
+nav li{
+    display: block;
+    width: 200px;
+    height: 30px;
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+}
+nav a{
+    text-decoration: none;
+    color: #000;
+    line-height: 30px;
+    display: inline-block;
+    width: 200px;
+    padding: 0 10px;
+}
+nav a:hover{
+    color: #ccc;
+}
+.cha{
+    position: relative;
+}
+.con{
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    display: none;
+}
+.cha:hover .con{
+    display: block;
+}
+.content{
+    margin-left: 20px;
+    width: 100%;
+}
+.hang{
+    display: flex;
+    justify-content: space-around;
+}
+.hang img{
+    width: 200px;
+    height: 200px;
+}
+.hang1{
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.hang1 .hang11{
+    text-align: center;
+}
+.hang1 .hang12{
+    height: 30px;
+    /* width: 200px; */
+    padding: 0 10px;
+    border-top: 1px solid #ccc;
+}
+.hang1 .hang12:hover p{
+    color: red;
+}
+.hang1 .hang13{
+    height: 30px;
+    width: 200px;
+    padding: 10px 10px;
+}
+.hang13 p{
+    color: red;
+}
+.hang13 u{
+    color: #000;
+}
+.hang13 span{
+    color: #fff; 
+    background-color: red;
+    margin-left: 5px;
+}
+.hang1 .hang14{
+    height: 30px;
+    width: 200px;
+    padding: 0 10px;
+}

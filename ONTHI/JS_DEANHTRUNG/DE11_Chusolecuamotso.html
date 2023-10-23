@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            padding: 5px;
+            margin: auto;
+            border: 1px solid #333;
+        }
+        input{
+            width: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th>Nhập số nguyên: </th>
+                <th><input type="number" id="in"></th>
+            </tr>
+            <tr>
+                <th align="left">Số chữ số lẻ:</th>
+                <th><input type="text" id="out"></th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="button" onclick="fun2()">Đếm</button>
+                    <button type="button" onclick="fun1()">Huỷ bỏ</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function fun1(){
+            document.getElementById("in").value = "";
+            document.getElementById("out").value = "";
+        }
+        function fun2(){
+            let num = document.getElementById("in").value.split("");
+            let b = [];
+            for(let i = 0; i < num.length; i++){
+                if(num[i] != "" && num[i] % 2 != 0){
+                    b.push(num[i]);
+                }
+            }
+            document.getElementById("out").value = b.length;
+        }
+    </script>
+</body>
+</html>

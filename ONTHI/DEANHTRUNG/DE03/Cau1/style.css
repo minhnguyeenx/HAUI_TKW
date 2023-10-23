@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    display: block;
+}
+.h1{
+    height: 50px;
+    
+}
+.h11{
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+}
+.h11 p{
+    line-height: 50px;
+    color: #fff;
+}
+.h11 ul{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.h11 li{
+    height: 50px;
+    padding: 0 10px;
+}
+.h11 a{
+    line-height: 50px;
+    color: #fff;
+}
+.h2{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.h2 img{
+    height: 40px;
+    width: 40px;
+}
+.h22{
+    display: flex;
+    border-radius: 10px 10px 10px 10px;
+}
+.h221 input{
+    line-height: 40px;
+    width: 300px;
+    border: 1px solid yellow;
+    border-radius: 10px 0px 0px 10px;
+}
+.h222 button{
+    height: 42px;
+    width: 100px;
+    background-color: yellow;
+    border: 1px solid yellow;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.h24 p:hover{
+    color: red;
+}
+.h25{
+    display: flex;
+}
+.h25 button{
+    height: 40px;
+    width: 40px;
+}
+.h25 p{
+    line-height: 40px;
+}
+.h251{
+    text-align: center;
+}
+.h252{
+    text-align: center;
+}
+section{
+    margin-top: 20px;
+    display: flex;
+}
+section nav{
+    margin-right: 20px;
+}
+section nav ul{
+    width: 250px;
+}
+section nav li{
+    width: 250px;
+    height: 30px;
+    background-color: #cccccc;
+}
+section nav a{
+    line-height: 30px;
+    width: 250px;
+    display: inline-block;
+    padding: 0 10px;
+    color: #000;
+}
+section nav a:hover{
+    color: yellow;
+}
+.cha{
+    position: relative;
+}
+.con{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    display: none;
+    height: 90px;
+    border: 1px solid #ccc;
+}
+.con a{
+    color: #000;
+}
+.con li{
+    background-color: #fff;
+}
+.cha:hover .con{
+    display: block;
+}
+.st{
+    width: 100%;
+}
+.st1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.st1 p{
+    /* padding-left: 10px; */
+    padding: 10px 10px;
+}
+.st1 img{
+    height: 200px;
+    width: 200px;
+}
+.st11{
+    display: block;
+    border: 1px solid #ccc;
+    width: calc(100% /4);
+}
+.st111{
+    text-align: center;
+}
+.st112{
+    border-bottom: 1px solid #ccc;
+}
+.st113{
+    display: flex;
+}
+.st1131{
+    width: 80%;
+}
+.st113{
+    align-items: center;
+}
+.st113 p{
+    color: red;
+}
+.st113 u{
+    color: #000;
+}
+.st113 del{
+    color: #000;
+}
+.st113 span{
+    background-color: red;
+    color: #fff;
+    margin: 0 5px;
+}

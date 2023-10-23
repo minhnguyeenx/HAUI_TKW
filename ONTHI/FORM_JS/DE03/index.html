@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header, footer{
+            height: 50px;
+            width: 100%;
+            background-color: blue;
+        }
+        header p, footer p{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+        }
+        nav{
+            background-color: rgb(29, 162, 97);
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            height: 40px;
+        }
+        nav li{
+            height: 40px;
+            width: 150px;
+            background-color: rgb(29, 162, 97);
+        }
+        nav a{
+            text-decoration: none;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            padding: 0 10px;
+            display: inline-block;
+            width: 150px;
+            font-size: 18px;
+        }
+        nav a:hover{
+            background-color: red;
+            color: yellow;
+        }
+        .cha{
+            position: relative;
+        }
+        .con{
+            position: absolute;
+            display: none;
+            top: 40px;
+            left: 0;
+        }
+        .con li{
+            width: 200px;  
+        }
+        .con a{
+            width: 200px;
+            font-size: 18px;
+        }
+        .cha:hover .con{
+            display: block;
+        }
+        .content{
+            width: 100%;
+            margin: 20px 0;
+        }
+        table{
+            width: 60%;
+            margin: auto;
+            background-color: blue;
+            border-radius: 8px;
+            padding: 10px 0;
+        }
+        table th{
+            color: #fff;
+            font-size: 18px;
+        }
+        .le {
+            padding-left: 10%;
+            width: 40%;
+        }
+        .ri input{
+            width: 60%;
+            padding-right: 10%;
+        }
+        #blank{
+            color: red;
+            /* padding: 10px; */
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <p>BÀI KIỂM TRA SỐ 2</p>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Lập trình Java</a></li>
+                <li class="cha">
+                    <a href="#">Thiết kế web</a>
+                    <ul class="con">
+                        <li><a href="#">Tài liệu HTML</a></li>
+                        <li><a href="#">Tài liệu HTML</a></li>
+                        <li><a href="#">Tài liệu HTML</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lập trình Java</a></li>
+                <li><a href="#">Lập trình Java</a></li>
+                <li><a href="#">Lập trình Java</a></li>
+                <li><a href="#">Lập trình Java</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <table>
+                <tr>
+                    <th colspan="2" align="center">TÍNH UCLN</th>
+                </tr>
+                <tr>
+                    <th class="le" align="left">Nhập số thứ nhất</th>
+                    <th class="ri" align="left">
+                        <input type="text" id="num1">
+                    </th>
+                </tr>
+                <tr>
+                    <th class="le" align="left">Nhập số thứ hai</th>
+                    <th class="ri" align="left">
+                        <input type="text" id="num2">
+                    </th>
+                </tr>
+                <tr>
+                    <th class="le" align="left">UCLN của hai số trên là: </th>
+                    <th class="ri" align="left">
+                        <input type="text" id="ucln">
+                    </th>
+                </tr>
+                <tr>
+                    <th align="right">
+                        <button type="button" onclick="myfunc1()">Tìm</button>
+                    </th>
+                    <th align="left">
+                        <button type="button" onclick="myfunc2()">Huỷ bỏ</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" align="center">
+                        <div id="blank"></div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <p>BẢN QUYỀN THUỘC BÀI KIỂM TRA 2</p>
+    </footer>
+    <!-- <script src="./script.js"></script> -->
+    <script>
+    function myfunc1(){
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        // const num3 = document.getElementById("ucln").value;
+        console.log(num1);
+        console.log(num2);
+        if(check_blank() == 1){
+            document.getElementById("blank").innerHTML = "Vui lòng nhập đầy đủ thông tin";
+        }
+        else{
+            document.getElementById("blank").innerHTML = "";
+            let so1 = num1;
+            let so2 = num2;
+            
+            while(so1 * so2 != 0){
+                if(so1 > so2){
+                    so1 = so1%so2;
+                }
+                else{
+                    so2 = so2%so1;
+                }
+            }
+            var ans;
+            if(so1 > so2) ans = so1;
+            else ans = so2;
+            document.getElementById("ucln").value = ans;
+        }
+    }
+    function check_blank(){
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        let check = 0;
+
+        if(num1 == ""){
+            check+=1;
+        }
+        if(num2 == ""){
+            check+=1;
+        }
+        if(check > 0){
+            return 1;
+            // document.getElementById("blank").innerHTML = "Vui lòng nhập đầy đủ thông tin";
+        }
+        else{
+            return 0;
+            // document.getElementById("blank").innerHTML = "";
+        }
+    }
+    function myfunc2(){
+        document.getElementById("num1").value = "";
+        document.getElementById("num2").value = "";
+        document.getElementById("ucln").value = "";
+    }
+    </script>
+</body>
+</html>

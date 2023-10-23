@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: auto;
+            /* padding: 5px; */
+            border: 1px solid #333;
+            background-color: aliceblue;
+        }
+        th{
+            border: 1px solid #333;
+        }
+        input{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th colspan="2">Tìm từ dài nhất</th>
+            </tr>
+            <tr>
+                <th>Nhập xâu</th>
+                <th><input type="text" id="in"></th>
+            </tr>
+            <tr>
+                <th>Thông báo kết quả</th>
+                <th><input type="text" id="out"></th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="button" onclick="fun1()">Xoá</button>
+                    <button type="button" onclick="fun2()">Tìm kiếm</button>
+                </th>   
+            </tr>
+        </table>
+    </form>
+    <script>
+        function fun1(){
+            document.getElementById("in").value = "";
+            document.getElementById("out").value = "";
+        }
+        function fun2(){
+            let a = document.getElementById("in").value.split(" ");
+            let b = document.getElementById("in").value;
+            
+            let maxx = -1;
+            let chuoi = "";
+            for(let i = a.length -1; i >= 0; i--){
+                if(a[i].length >= maxx){
+                    maxx = a[i].length;
+                    chuoi = a[i];
+                }
+            }
+            document.getElementById("out").value = b.indexOf(chuoi);
+        }
+    </script>
+</body>
+</html>

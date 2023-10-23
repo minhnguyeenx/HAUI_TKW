@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <p>BÀI KIỂM TRA SỐ 2</p>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Lập trình Java</a></li>
+                <li class="cha">
+                    <a href="#">Thiết kế web</a>
+                    <ul class="con">
+                        <li><a href="#">Tài liệu HTML</a></li>
+                        <li><a href="#">Tài liệu HTML</a></li>
+                        <li><a href="#">Tài liệu HTML</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lập trình Java</a></li>
+                <li><a href="#">Lập trình Java</a></li>
+                <li><a href="#">Lập trình Java</a></li>
+                <li><a href="#">Lập trình Java</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <table>
+                <tr>
+                    <th class="left" align="right">Họ và tên</th>
+                    <th class="right" align="left"><input type="text" id="ht" placeholder="Họ tên" required></th>
+                </tr>
+                <tr>
+                    <th class="left" align="right">Địa chỉ</th>
+                    <th class="right" align="left"><input type="text" id="dc" placeholder="Địa chỉ" required></th>
+                </tr>
+                <tr>
+                    <th class="left" align="right">Giới tính</th>
+                    <th class="right" align="left">
+                        Nam<input type="radio" name="gender">
+                        Nữ <input type="radio" name="gender">
+                        Khác <input type="radio" name="gender" checked="true">
+                    </th>
+                </tr>
+                <tr>
+                    <th class="left" align="right">Sở thích</th>
+                    <th class="right" align="left">
+                        Sữa <input type="checkbox">
+                        Chè bưởi <input type="checkbox">
+                        Phở <input type="checkbox">
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" align="center">
+                        <button type="button" onclick="myfunc()">Kiểm tra</button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <p>BẢN QUYỀN THUỘC VỀ TEST 2</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

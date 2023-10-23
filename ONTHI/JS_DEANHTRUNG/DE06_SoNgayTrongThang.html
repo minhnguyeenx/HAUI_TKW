@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: auto;
+            padding: 5px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th>Tháng:</th>
+                <th><input type="text" id="thang"  ></th>
+                <th>Năm:</th>
+                <th><input type="text" id="nam"></th>
+            </tr>
+            <tr>
+                <th>Số ngày</th>
+                <th><input type="text" id="out"></th>
+            </tr>
+            <tr>
+                <th colspan="2"><button type="button" onclick="func1()">Hiển thị số ngày của tháng</button></th>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function func1(){
+            let thang = document.getElementById("thang").value;
+            let nam = document.getElementById("nam").value;
+
+            let a = [0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            if(nam % 400 == 0 || (nam % 4 == 0 && nam % 100 != 0)){
+                a[2] += 1;
+            }
+            document.getElementById("out").value = a[thang];
+        }
+    </script>
+</body>
+</html>

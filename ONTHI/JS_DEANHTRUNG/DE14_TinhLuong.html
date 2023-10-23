@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th>Lương cơ bản</th>
+                <th><input type="number" id="in1"></th>
+            </tr>
+            <tr>
+                <th>Loại hàng</th>
+                <th>
+                    <select id="loaihang">
+                        <option value="1.8" class="heluong">A</option>
+                        <option value="1.9" class="heluong">B</option>
+                        <option value="2.0" class="heluong">C</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>Tình trạng</th>
+                <th>
+                    Còn<input type="radio" id="con" name="gender" >
+                    Hết<input type="radio" id="het" name="gender">
+                </th>
+            </tr>
+            <tr>
+                <th>Thành tiền</th>
+                <th><input type="text" id="out"></th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="button" onclick="fun()">Tính</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function fun(){
+            let loaihang = document.getElementById("loaihang").value;
+            let luong = document.getElementById("in1").value;
+            let check = false;
+            let tinhtrang = document.getElementsByName("gender");
+
+            // if(tinhtrang[0].isChecked == true){
+            //     check = true;
+            // }
+            if(tinhtrang[0].checked == true){
+                document.getElementById("out").value = loaihang*luong;
+            }
+            else{
+                document.getElementById("out").value = 0;
+            }
+
+        }
+    </script>
+</body>
+</html>

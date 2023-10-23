@@ -1,0 +1,19 @@
+table{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px 1px;
+}
+tr{
+    width: 100%;
+}
+.left{
+    width: 150px;
+}
+.right input{
+    width: 90%;
+}
+.le, .ri{
+    width: 50%;
+}

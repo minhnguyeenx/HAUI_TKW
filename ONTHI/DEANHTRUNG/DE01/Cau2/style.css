@@ -1,0 +1,11 @@
+.form{
+
+}
+table {
+    border: 1px solid #333;
+    padding: 30px;
+    margin: auto;
+}
+input{
+    width: 300px;
+}
